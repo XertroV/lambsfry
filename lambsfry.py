@@ -75,13 +75,13 @@ class Database:
 				return siteUrl + fb
 		return 'Error, no spare firstbits found :( -- that should not happen...'		
 	def checkFb(self, fb):
-		return self.get('fbToUrl:%s' % fb) if self.exists('fbToUrl:%s' % fb) else return False
+		return self.get('fbToUrl:%s' % fb) if self.exists('fbToUrl:%s' % fb) else False
 
 # routes
 @app.route("/<path:fb>")
 def lookup(fb):
 	url = db.checkFb(fb)
-	redirect(url) if url != False else return '%s firstbits not found' % fb
+	return redirect(url) if url != False else '%s firstbits not found' % fb
 
 @app.route("/",methods=["GET","POST"])
 def main():
