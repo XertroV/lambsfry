@@ -2,8 +2,8 @@
 
 '''Public domain or something. Do what you want.
 - Max Kaye'''
-''' Minify-er written with Flask and redis '''
-''' LaMbsFRy: Light Minifyer Flask Redis '''
+''' Minifier written with Flask and redis '''
+''' LaMbsFRy: Light Minifier Flask Redis '''
 
 # config
 logfilename = 'lmfr.log'
